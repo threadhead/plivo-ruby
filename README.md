@@ -1,6 +1,6 @@
 # Plivo Ruby Library
 
-[![Gem Version](https://badge.fury.io/rb/plivo.png)](http://badge.fury.io/rb/plivo) 
+[![Gem Version](https://badge.fury.io/rb/plivo.png)](http://badge.fury.io/rb/plivo)
 [![Dependency Status](https://gemnasium.com/plivo/plivo-ruby.png)](https://gemnasium.com/plivo/plivo-ruby)
 
 ## Description
@@ -27,8 +27,7 @@ to finish the installation
 ### Requirements
 
 ```
-gem "rest-client", "~> 1.6.7"
-gem "json", "~> 1.6.6"
+gem "rest-client", "~> 2.0.0"
 gem "htmlentities", "~> 4.3.1"
 ```
 
