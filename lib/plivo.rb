@@ -41,7 +41,7 @@ module Plivo
     end
 
     def hash_to_params(myhash)
-      return myhash.map { |k, v| "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}" }.join("&")
+      URI.encode_www_form(myhash)
     end
 
     def request(method, path, params=nil)
@@ -521,9 +521,8 @@ module Plivo
       return request('GET', "/Message/", params)
     end
 
-    def get_message(params={})
-      record_id = params.delete('record_id')
-      return request('GET', "/Message/#{record_id}/", params)
+    def get_message(record_id)
+      return request('GET', "/Message/#{record_id}/")
     end
   end
 
