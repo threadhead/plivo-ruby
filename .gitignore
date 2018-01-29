@@ -1,18 +1,14 @@
-*.gem
-*.rbc
-.bundle
-.config
-coverage
-InstalledFiles
-lib/bundler/man
-pkg
-rdoc
-spec/reports
-test/tmp
-test/version_tmp
-tmp
-
-# YARD artifacts
+.idea/
+.DS_STORE
+.bundle/
 .yardoc
-_yardoc
+Gemfile.lock
+_yardoc/
+coverage/
+pkg/
 doc/
+spec/reports/
+tmp/
+bin/
+# rspec failure tracking
+.rspec_status
