@@ -8,22 +8,28 @@ module Plivo
         super
       end
 
-      def to_s
+      def to_h
         {
-          api_id: @api_id,
-          error_code: @error_code,
-          from_number: @from_number,
-          message_direction: @message_direction,
-          message_state: @message_state,
-          message_time: @message_time,
-          message_type: @message_type,
-          message_uuid: @message_uuid,
-          resource_uri: @resource_uri,
-          to_number: @to_number,
-          total_amount: @total_amount,
-          total_rate: @total_rate,
-          units: @units
-        }.to_s
+          api_id:             @api_id,
+          error_code:         @error_code,
+          from_number:        @from_number,
+          message_direction:  @message_direction,
+          message_state:      @message_state,
+          message_time:       @message_time,
+          message_type:       @message_type,
+          message_uuid:       @message_uuid,
+          resource_uri:       @resource_uri,
+          to_number:          @to_number,
+          total_amount:       @total_amount,
+          total_rate:         @total_rate,
+          units:              @units
+        }
+      end
+      alias to_hash to_h
+      alias attributes to_h
+
+      def to_s
+        to_h.to_s
       end
     end
 
@@ -170,7 +176,7 @@ module Plivo
           message_list = list(offset: offset)
           message_list[:objects].each { |message| yield message }
           offset += 20
-          return unless message_list.length == 20
+          return unless message_list[:objects].length == 20
         end
       end
     end
