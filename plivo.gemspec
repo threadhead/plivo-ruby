@@ -9,7 +9,6 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.summary = 'A Ruby gem for communicating with the Plivo Cloud Platform'
   s.files = Dir['lib/*']
-  s.has_rdoc = true
   s.extra_rdoc_files = ['README.md']
   s.test_files = Dir["spec/**/*"]
 
