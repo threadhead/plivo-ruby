@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 RSpec.describe Plivo do
-  let(:auth_id) { 'SAMWFHNGFHNTJKZJDJOT' }
-  let(:auth_token) { 'MGRlY2JkYWEyZDg3ZWUzZmQ0M2ZmNjI3NzdhYTA0' }
+  let(:auth_id) { '' }
+  let(:auth_token) { '' }
 
   describe 'RestAPI' do
     let(:rest_api) { Plivo::RestAPI.new(auth_id, auth_token) }
